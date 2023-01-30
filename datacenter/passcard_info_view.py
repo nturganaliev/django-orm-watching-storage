@@ -20,11 +20,11 @@ def passcard_info_view(request, passcode):
         if visit.leaved_at is not None:
             entered_at = localtime(visit.entered_at)
             duration = get_duration(visit)
-            flag = is_visit_long(visit, minutes=1000)
+            is_strange = is_visit_long(visit, minutes=60)
             this_passcard_visits.append({
                 'entered_at': entered_at,
                 'duration': format_duration(duration),
-                'is_strange': flag
+                'is_strange': is_strange
             })
     context = {
         'passcard': passcard,
