@@ -1,7 +1,4 @@
 # Added by nturganaliev
-.replit
-poetry.lock
-pyproject.toml
 .activate
 *.env
 .venv
