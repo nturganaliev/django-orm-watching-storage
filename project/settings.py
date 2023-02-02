@@ -7,7 +7,7 @@ from environs import Env
 env = Env()
 env.read_env()
 
-DATABASES = {'default': dj_database_url.parse(env('DATABASES_URL'))}
+DATABASES = {'default': dj_database_url.parse(env('DATABASE_URL'))}
 
 INSTALLED_APPS = ['datacenter']
 
